@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Mail;
 
 Route::get('/', function () {
-    return "Succesfully installed Laravel! Lrnz Caldz";
+    return "Succesfully installed Laravel! Sebastian L. Damugo";
     
     //view('welcome');
 });
@@ -19,8 +19,8 @@ Route::get('/about',function () {
 Route::get('/insert-user',function (){
     //Model (ORM) - Eloquent
     User::create([
-    'name' => 'Lrnz Caldz' . rand(1,1000000),
-    'email'=> 'lrnz.calderon' . rand(1,1000000) . '@example.com',
+    'name' => 'Sebastian Damugo' . rand(1,1000000),
+    'email'=> 'sebastiandamugo' . rand(1,1000000) . '@example.com',
     'password' => Hash::make('123456'),
     ]);
 });
