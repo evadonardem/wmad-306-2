@@ -10,6 +10,11 @@ export default function GuestLayout({ children }) {
                 </Link>
             </div>
 
+            <div className="mt-4 flex space-x-4">
+                <Link href={route('app.projects')} className="text-sm text-gray-700 hover:underline">Projects</Link>
+                <Link href={route('app.tasks')} className="text-sm text-gray-700 hover:underline">Tasks</Link>
+            </div>
+
             <div className="mt-6 w-full overflow-hidden bg-white px-6 py-4 shadow-md sm:max-w-md sm:rounded-lg">
                 {children}
             </div>

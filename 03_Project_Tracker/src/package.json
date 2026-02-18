@@ -16,6 +16,7 @@
         "axios": "^1.11.0",
         "concurrently": "^9.0.1",
         "laravel-vite-plugin": "^2.0.0",
+        "playwright": "^1.58.2",
         "postcss": "^8.4.31",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
@@ -25,6 +26,7 @@
     "dependencies": {
         "@emotion/react": "^11.14.0",
         "@emotion/styled": "^11.14.1",
+        "@inertiajs/inertia": "^0.11.0",
         "@mui/icons-material": "^7.3.8",
         "@mui/material": "^7.3.8"
     }

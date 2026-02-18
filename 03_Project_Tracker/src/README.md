@@ -1,3 +1,25 @@
+```
+## Project Tracker — Quick Notes
+
+This workspace contains a minimal Project → Task tracker used for the course exercises.
+
+- Start the application with Docker Compose (web exposed on port 8000).
+- Seeded test credentials: **test@example.com** / **password** (created by the database seeder).
+- Projects: visit `/app/projects` after login.
+- Tasks: visit `/app/tasks` after login.
+
+If you make changes to the frontend, run the build inside the web container:
+
+```bash
+docker compose exec web bash -lc "npm install --prefix /var/www/html && npm run build --prefix /var/www/html"
+```
+
+If routes or configuration change, refresh cached config in the container:
+
+```bash
+docker compose exec web php artisan config:clear
+docker compose exec web php artisan route:clear
+```
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 
 <p align="center">

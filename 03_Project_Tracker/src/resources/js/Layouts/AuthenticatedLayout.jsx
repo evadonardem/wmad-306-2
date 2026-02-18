@@ -2,6 +2,7 @@ import ApplicationLogo from '@/Components/ApplicationLogo';
 import Dropdown from '@/Components/Dropdown';
 import NavLink from '@/Components/NavLink';
 import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
+import { ToastProvider } from '@/Components/ToastProvider';
 import { Link, usePage } from '@inertiajs/react';
 import { useState } from 'react';
 
@@ -30,6 +31,8 @@ export default function AuthenticatedLayout({ header, children }) {
                                 >
                                     Dashboard
                                 </NavLink>
+                                <NavLink href={route('app.projects')} active={route().current('app.projects')}>Projects</NavLink>
+                                <NavLink href={route('app.tasks')} active={route().current('app.tasks')}>Tasks</NavLink>
                             </div>
                         </div>
 
@@ -134,6 +137,8 @@ export default function AuthenticatedLayout({ header, children }) {
                         >
                             Dashboard
                         </ResponsiveNavLink>
+                            <ResponsiveNavLink href={route('app.projects')} active={route().current('app.projects')}>Projects</ResponsiveNavLink>
+                            <ResponsiveNavLink href={route('app.tasks')} active={route().current('app.tasks')}>Tasks</ResponsiveNavLink>
                     </div>
 
                     <div className="border-t border-gray-200 pb-1 pt-4">
@@ -170,7 +175,11 @@ export default function AuthenticatedLayout({ header, children }) {
                 </header>
             )}
 
-            <main>{children}</main>
+            <main>
+                <ToastProvider>
+                    {children}
+                </ToastProvider>
+            </main>
         </div>
     );
 }
