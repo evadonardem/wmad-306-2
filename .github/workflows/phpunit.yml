@@ -1,0 +1,35 @@
+name: PHPUnit Tests
+
+on:
+  push:
+    branches: [ main, 03_Project_Tracker_Visaya ]
+  pull_request:
+    branches: [ main, 03_Project_Tracker_Visaya ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      - name: Validate composer.json
+        run: composer validate --no-check-publish
+
+      - name: Install dependencies
+        run: composer install --no-progress --no-suggest --prefer-dist --optimize-autoloader
+
+      - name: Prepare .env
+        run: cp .env.example .env || true
+
+      - name: Generate APP_KEY
+        run: php artisan key:generate --ansi
+
+      - name: Run tests
+        run: composer test
