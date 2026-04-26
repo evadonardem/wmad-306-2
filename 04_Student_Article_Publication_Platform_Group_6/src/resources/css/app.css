@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Nunito+Sans:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --cp-bg: #f4f7fb;
+    --cp-text: #1f2a44;
+    --cp-accent: #2f6fdb;
+    --cp-card-border: rgba(148, 163, 184, 0.32);
+}
+
+.dark {
+    --cp-card-border: rgba(148, 163, 184, 0.42);
+}
+
+html,
+body,
+#app {
+    min-height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'Nunito Sans', 'Segoe UI', sans-serif;
+    background-color: var(--cp-bg);
+    color: var(--cp-text);
+}
+
+.MuiCard-root {
+    border: 1px solid var(--cp-card-border);
+}
+
+.MuiPaper-root:not(.MuiAppBar-root):not(.MuiDrawer-paper) {
+    border: 1px solid var(--cp-card-border);
+}
+
+body[data-larger-text='1'] {
+    font-size: 17px;
+}
+
+body[data-compact-cards='1'] .MuiCard-root .MuiCardContent-root,
+body[data-compact-cards='1'] .MuiPaper-root {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+body[data-dashboard-density='compact'] .MuiContainer-root {
+    max-width: 72rem;
+}
+
+/* Dashboard feed – compact cards */
+body[data-compact-cards='1'] .dashboard-feed-image {
+    height: 7rem !important;
+    min-height: 7rem !important;
+}
+
+body[data-compact-cards='1'] .dashboard-feed-content {
+    padding: 1rem 1.25rem !important;
+}
+
+/* Dashboard feed – larger text */
+body[data-larger-text='1'] .dashboard-feed-card {
+    font-size: 1.0625rem;
+}
+
+body[data-larger-text='1'] .dashboard-feed-card .dashboard-feed-title {
+    font-size: 1.25rem;
+}
+
+@media (min-width: 640px) {
+    body[data-larger-text='1'] .dashboard-feed-card .dashboard-feed-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* Dashboard feed – compact density (tighter layout) */
+body[data-dashboard-density='compact'] .dashboard-feed-wrap {
+    max-width: 72rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+body[data-dashboard-density='compact'] .dashboard-feed-grid {
+    gap: 1.25rem;
+}
+
+body[data-dashboard-density='compact'] .dashboard-feed-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+body[data-dashboard-density='compact'] .dashboard-feed-header {
+    margin-bottom: 1.5rem;
+}
+
+body[data-dashboard-density='compact'] .dashboard-feed-footer {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* Dashboard feed – comfortable density (default relaxed layout) */
+body[data-dashboard-density='comfortable'] .dashboard-feed-wrap {
+    max-width: 80rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+}
+
+body[data-dashboard-density='comfortable'] .dashboard-feed-grid {
+    gap: 2rem;
+}
+
+/* Publication show – compact density */
+body[data-dashboard-density='compact'] .publication-show-wrap {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+}
+
+body[data-dashboard-density='compact'] .publication-show-paper {
+    padding: 1.5rem !important;
+}
+
+@media (min-width: 900px) {
+    body[data-dashboard-density='compact'] .publication-show-paper {
+        padding: 2.5rem !important;
+    }
+}
+
+body[data-dashboard-density='compact'] .publication-show-more {
+    margin-top: 2rem !important;
+}
+
+body[data-dashboard-density='compact'] .publication-show-more-grid {
+    gap: 1rem !important;
+}
+
+body[data-dashboard-density='compact'] .publication-show-more-card .MuiCardContent-root {
+    padding: 1rem !important;
+}
+
+
+@keyframes cpFadeUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 18px, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes cpSoftGlow {
+    0%, 100% {
+        box-shadow: 0 0 0 rgba(99, 102, 241, 0);
+    }
+
+    50% {
+        box-shadow: 0 0 34px rgba(99, 102, 241, 0.22);
+    }
+}
+
+.welcome-fade-up {
+    animation: cpFadeUp 0.7s ease-out both;
+}
+
+.welcome-glow-card {
+    transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+    border-color: rgba(129, 140, 248, 0.22);
+}
+
+.welcome-glow-card:hover {
+    transform: translateY(-4px);
+    animation: cpSoftGlow 2.8s ease-in-out infinite;
+    border-color: rgba(129, 140, 248, 0.46);
+}
+
+@keyframes cpPageEnter {
+    0% {
+        opacity: 0;
+        transform: translate3d(0, 18px, 0) scale(0.99);
+    }
+    100% {
+        opacity: 1;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+}
+
+.cp-page-enter {
+    animation: cpPageEnter 520ms cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cp-page-enter,
+    .welcome-fade-up,
+    .welcome-glow-card,
+    .auth-animate-reveal-0,
+    .auth-animate-reveal-1,
+    .auth-animate-reveal-2,
+    .auth-animate-reveal-3,
+    .auth-animate-reveal-4,
+    .auth-animate-reveal-5,
+    .animate-reveal-0,
+    .animate-reveal-1,
+    .animate-reveal-2,
+    .animate-reveal-3,
+    .animate-reveal-4 {
+        animation: none !important;
+        transition: none !important;
+    }
+}
