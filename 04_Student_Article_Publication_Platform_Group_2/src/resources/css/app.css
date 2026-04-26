@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Override Jodit editor styles for clean look */
+.jodit-container {
+    border-radius: 8px !important;
+    border-color: #E2E8F0 !important;
+}
+
+.jodit-container:hover {
+    border-color: #2A7B9B !important;
+}
+
+.jodit-toolbar__box {
+    background: #FAFBFC !important;
+    border-bottom: 1px solid #E2E8F0 !important;
+    border-radius: 8px 8px 0 0 !important;
+}
+
+.jodit-workplace {
+    background: #FFFFFF !important;
+    min-height: 350px !important;
+}
+
+.jodit-status-bar {
+    background: #FAFBFC !important;
+    border-top: 1px solid #E2E8F0 !important;
+    border-radius: 0 0 8px 8px !important;
+}
+
+.jodit-status-bar .jodit-status-bar__item a {
+    display: none !important;
+}
+
+.jodit-wysiwyg {
+    font-family: 'Inter', 'Roboto', sans-serif !important;
+    font-size: 15px !important;
+    line-height: 1.7 !important;
+    color: #1B2A4A !important;
+    padding: 20px 24px !important;
+}
