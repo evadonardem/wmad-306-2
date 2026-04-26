@@ -1,0 +1,483 @@
+/* ============================================
+  EXTREME ANIMATIONS - Dashboard Magic
+  ============================================ */
+
+/* Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Global animation setup */
+:root {
+  --animation-duration: 0.6s;
+  --animation-timing: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --primary-color: #3B82F6;
+  --emerald-color: #059669;
+  --glass-bg: rgba(30, 41, 59, 0.7);
+  --glow-color: rgba(59, 130, 246, 0.5);
+}
+
+/* ===== BOUNCE ANIMATIONS ===== */
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) translateY(30px);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes bounceUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounceScale {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* ===== GLOW ANIMATIONS ===== */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    filter: brightness(1);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+    filter: brightness(1.1);
+  }
+}
+
+@keyframes glowRing {
+  0% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(59, 130, 246, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(59, 130, 246, 0);
+  }
+}
+
+/* ===== ROTATE ANIMATIONS ===== */
+@keyframes spinSlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinFast {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes wobble {
+  0%, 100% {
+    transform: rotate(0deg) translateX(0);
+  }
+  25% {
+    transform: rotate(-2deg) translateX(-2px);
+  }
+  75% {
+    transform: rotate(2deg) translateX(2px);
+  }
+}
+
+/* ===== SHIMMER ANIMATIONS ===== */
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+@keyframes shimmerText {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* ===== FLOAT ANIMATIONS ===== */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes floatX {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+}
+
+/* ===== FLIP ANIMATIONS ===== */
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg) scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+  }
+}
+
+/* ===== SLIDE ANIMATIONS ===== */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== PULSE ANIMATIONS ===== */
+@keyframes pulsing {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(0.98);
+  }
+  20%, 50%, 80% {
+    transform: scale(1.05);
+  }
+  40%, 60% {
+    transform: scale(0.98);
+  }
+  70% {
+    transform: scale(1.02);
+  }
+}
+
+/* ===== COMPLEX ANIMATIONS ===== */
+@keyframes morphing {
+  0%, 100% {
+    border-radius: 30%;
+    background-position: 0% 50%;
+  }
+  50% {
+    border-radius: 70%;
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes rainbowShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ============================================
+  UTILITY CLASSES - Apply to components
+  ============================================ */
+
+/* Bounce effect */
+.animate-bounce-in {
+  animation: bounceIn var(--animation-duration) var(--animation-timing) forwards;
+}
+
+.animate-bounce-up {
+  animation: bounceUp 0.5s ease-out forwards;
+}
+
+.animate-bounce-scale {
+  animation: bounceScale 2s ease-in-out infinite;
+}
+
+/* Glow effects */
+.animate-glow-pulse {
+  animation: glowPulse 2s ease-in-out infinite;
+}
+
+.animate-glow-ring {
+  animation: glowRing 2s ease-out infinite;
+}
+
+/* Rotation */
+.animate-spin-slow {
+  animation: spinSlow 20s linear infinite;
+}
+
+.animate-spin-fast {
+  animation: spinFast 8s linear infinite;
+}
+
+.animate-wobble {
+  animation: wobble 0.8s ease-in-out infinite;
+}
+
+/* Shimmer */
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+/* Float */
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-x {
+  animation: floatX 4s ease-in-out infinite;
+}
+
+/* Flip */
+.animate-flip-in {
+  animation: flipIn 0.6s var(--animation-timing) forwards;
+}
+
+/* Slide */
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-slide-in-down {
+  animation: slideInDown 0.6s ease-out forwards;
+}
+
+/* Pulse */
+.animate-pulsing {
+  animation: pulsing 3s ease-in-out infinite;
+}
+
+.animate-heartbeat {
+  animation: heartbeat 1.3s ease-in-out infinite;
+}
+
+/* Morphing */
+.animate-morphing {
+  background-size: 200% 200%;
+  animation: morphing 4s ease-in-out infinite;
+}
+
+/* Rainbow shift */
+.animate-rainbow-shift {
+  background-size: 200% 200%;
+  animation: rainbowShift 4s ease infinite;
+}
+
+/* ============================================
+  GLASS MORPHISM EFFECTS
+  ============================================ */
+
+.glass-effect {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+}
+
+.glass-effect-light {
+  background: rgba(30, 41, 59, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.glass-effect-strong {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(30px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+  INTERACTIVE EFFECTS
+  ============================================ */
+
+.interactive-card {
+  transition: all 0.4s var(--animation-timing);
+  cursor: pointer;
+}
+
+.interactive-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.2);
+}
+
+.interactive-card:active {
+  transform: translateY(-4px) scale(0.98);
+}
+
+/* Button hover effects */
+.btn-glow:hover {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.6),
+              inset 0 0 20px rgba(59, 130, 246, 0.3);
+}
+
+/* Icon animations */
+.icon-bounce {
+  transition: all 0.3s ease;
+}
+
+.icon-bounce:hover {
+  transform: scale(1.3) rotate(10deg);
+  animation: bounceScale 0.6s ease-out;
+}
+
+/* Text glow on hover */
+.text-glow:hover {
+  text-shadow: 0 0 20px rgba(59, 130, 246, 0.8),
+               0 0 40px rgba(59, 130, 246, 0.4);
+  color: #60A5FA;
+}
+
+/* Progress bar animation */
+.progress-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-animated::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+/* ============================================
+  STAGGER ANIMATIONS (for lists)
+  ============================================ */
+
+@keyframes staggerFade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.list-item-stagger {
+  animation: staggerFade 0.5s ease-out forwards;
+}
+
+.list-item-stagger:nth-child(1) { animation-delay: 0.05s; }
+.list-item-stagger:nth-child(2) { animation-delay: 0.1s; }
+.list-item-stagger:nth-child(3) { animation-delay: 0.15s; }
+.list-item-stagger:nth-child(4) { animation-delay: 0.2s; }
+.list-item-stagger:nth-child(5) { animation-delay: 0.25s; }
+.list-item-stagger:nth-child(6) { animation-delay: 0.3s; }
+.list-item-stagger:nth-child(n+7) { animation-delay: 0.35s; }
+
+/* ============================================
+  RESPONSIVE ANIMATIONS
+  ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Performance optimization */
+@media (max-width: 768px) {
+  .animate-glow-pulse,
+  .animate-glow-ring,
+  .animate-spin-slow,
+  .animate-wobble {
+    animation: none;
+  }
+  
+  .interactive-card:hover {
+    transform: translateY(-4px) scale(1.01);
+  }
+}
