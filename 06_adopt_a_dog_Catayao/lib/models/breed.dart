@@ -1,0 +1,9 @@
+class Breed {
+  final String name;
+  final List<String> subBreeds;
+
+  const Breed({required this.name, required this.subBreeds});
+
+  String displayName([String? subBreed]) =>
+      subBreed != null ? '$subBreed $name' : name;
+}
