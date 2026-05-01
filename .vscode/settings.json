@@ -1,7 +1,0 @@
-{
-  "dart.flutterSdkPath": "c:\\Users\\Acer\\wmad-306-2\\flutter",
-  "dart.flutterRunDeviceId": "chrome",
-  "terminal.integrated.env.windows": {
-    "PATH": "c:\\Users\\Acer\\bin;c:\\Users\\Acer\\wmad-306-2\\flutter\\bin;${env:PATH}"
-  }
-}
