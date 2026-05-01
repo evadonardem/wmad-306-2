@@ -1,0 +1,46 @@
+import 'dart:convert';
+import 'package:http/http.dart' as http;
+import '../models/breed.dart';
+
+class DogApiService {
+  static const _base = 'https://dog.ceo/api';
+  
+  Future<List<Breed>> fetchBreeds() async {
+    final uri = Uri.parse('$_base/breeds/list/all');
+    final response = await http.get(uri);
+    
+    if (response.statusCode != 200) {
+      throw Exception('Failed to load breeds');
+    }
+    
+    final Map<String, dynamic> data = jsonDecode(response.body);
+    final Map<String, dynamic> message = data['message'];
+    
+    return message.entries
+        .map((e) => Breed(
+              name: e.key,
+              subBreeds: List<String>.from(e.value as List),
+            ))
+        .toList()
+      ..sort((a, b) => a.name.compareTo(b.name));
+  }
+  
+  Future<String> fetchRandomImage(String breedName, [String? subBreed]) async {
+    String endpoint;
+    if (subBreed != null) {
+      endpoint = '$_base/breed/$breedName/$subBreed/images/random';
+    } else {
+      endpoint = '$_base/breed/$breedName/images/random';
+    }
+    
+    final uri = Uri.parse(endpoint);
+    final response = await http.get(uri);
+    
+    if (response.statusCode != 200) {
+      throw Exception('Failed to load image');
+    }
+    
+    final Map<String, dynamic> data = jsonDecode(response.body);
+    return data['message'] as String;
+  }
+}
