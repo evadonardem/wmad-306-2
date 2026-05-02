@@ -1,0 +1,115 @@
+﻿C:\flutter\bin\flutter.bat : Building flutter tool... 
+At line:1 char:4
++ & {C:\flutter\bin\flutter.bat --version 2>&1 | Out-File -FilePath 'c: ...
++    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Building flutter tool... :String) 
+    [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+Running pub upgrade... 
+Resolving dependencies...
+Downloading packages...
+Got dependencies.
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:5:7: Error: Method not found: 'UnmodifiableUint8ListView'.
+      UnmodifiableUint8ListView(Uint8List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:7:7: Error: Method not found: 'UnmodifiableUint32ListView'.
+      UnmodifiableUint32ListView(Uint32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:9:7: Error: Method not found: 'UnmodifiableInt32ListView'.
+      UnmodifiableInt32ListView(Int32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+Error: Unable to create dart snapshot for flutter tool. 
+Building flutter tool... 
+Running pub upgrade... 
+Resolving dependencies...
+Downloading packages...
+Got dependencies.
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:5:7: Error: Method not found: 'UnmodifiableUint8ListView'.
+      UnmodifiableUint8ListView(Uint8List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:7:7: Error: Method not found: 'UnmodifiableUint32ListView'.
+      UnmodifiableUint32ListView(Uint32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:9:7: Error: Method not found: 'UnmodifiableInt32ListView'.
+      UnmodifiableInt32ListView(Int32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+Error: Unable to create dart snapshot for flutter tool. 
+Building flutter tool... 
+Running pub upgrade... 
+Resolving dependencies...
+Downloading packages...
+Got dependencies.
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:5:7: Error: Method not found: 'UnmodifiableUint8ListView'.
+      UnmodifiableUint8ListView(Uint8List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:7:7: Error: Method not found: 'UnmodifiableUint32ListView'.
+      UnmodifiableUint32ListView(Uint32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:9:7: Error: Method not found: 'UnmodifiableInt32ListView'.
+      UnmodifiableInt32ListView(Int32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+Error: Unable to create dart snapshot for flutter tool. 
+Building flutter tool... 
+Running pub upgrade... 
+Resolving dependencies...
+Downloading packages...
+Got dependencies.
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:5:7: Error: Method not found: 'UnmodifiableUint8ListView'.
+      UnmodifiableUint8ListView(Uint8List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:7:7: Error: Method not found: 'UnmodifiableUint32ListView'.
+      UnmodifiableUint32ListView(Uint32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:9:7: Error: Method not found: 'UnmodifiableInt32ListView'.
+      UnmodifiableInt32ListView(Int32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+Error: Unable to create dart snapshot for flutter tool. 
+Building flutter tool... 
+Running pub upgrade... 
+Resolving dependencies...
+Downloading packages...
+Got dependencies.
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:5:7: Error: Method not found: 'UnmodifiableUint8ListView'.
+      UnmodifiableUint8ListView(Uint8List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:7:7: Error: Method not found: 'UnmodifiableUint32ListView'.
+      UnmodifiableUint32ListView(Uint32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:9:7: Error: Method not found: 'UnmodifiableInt32ListView'.
+      UnmodifiableInt32ListView(Int32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+Error: Unable to create dart snapshot for flutter tool. 
+Building flutter tool... 
+Running pub upgrade... 
+Resolving dependencies...
+Downloading packages...
+Got dependencies.
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:5:7: Error: Method not found: 'UnmodifiableUint8ListView'.
+      UnmodifiableUint8ListView(Uint8List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:7:7: Error: Method not found: 'UnmodifiableUint32ListView'.
+      UnmodifiableUint32ListView(Uint32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+../AppData/Local/Pub/Cache/hosted/pub.dev/archive-3.3.2/lib/src/bzip2/bzip2.dar
+t:9:7: Error: Method not found: 'UnmodifiableInt32ListView'.
+      UnmodifiableInt32ListView(Int32List(0));
+      ^^^^^^^^^^^^^^^^^^^^^^^^^
+Error: Unable to create dart snapshot for flutter tool. 
