@@ -18,7 +18,7 @@ services:
       - APP_ENV=local
       - APP_DEBUG=true
     command: >
-      sh -c "composer install --no-interaction --optimize-autoloader && cp .env.example .env && php artisan key:generate && php artisan migrate --force && php-fpm"
+      sh -c "composer install --no-interaction --optimize-autoloader && cp .env.example .env && php artisan key:generate && php artisan migrate --force || true && php-fpm"
     healthcheck:
       test: ["CMD", "php-fpm", "-t"]
       interval: 30s
