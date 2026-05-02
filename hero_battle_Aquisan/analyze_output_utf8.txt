@@ -1,0 +1,101 @@
+﻿Analyzing hero_battle_Aquisan...                                
+
+warning - Unused import: 'dart:math' - lib\engine\battle_engine.dart:1:8 - unused_import
+  error - Undefined name 'Override' used as an annotation - lib\main.dart:10:1 - undefined_annotation
+   info - The member 'build' overrides an inherited member but isn't annotated with '@override' - lib\main.dart:11:8 - annotate_overrides
+  error - The named parameter 'alignment' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:9:5 - missing_required_argument
+  error - The named parameter 'fullName' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:9:5 - missing_required_argument
+  error - The named parameter 'imageUrl' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:9:5 - missing_required_argument
+  error - The named parameter 'powerStats' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:9:5 - missing_required_argument
+  error - The named parameter 'publisher' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:9:5 - missing_required_argument
+  error - The named parameter 'maxHp' isn't defined - lib\providers\battle_provider.dart:12:7 - undefined_named_parameter
+  error - The named parameter 'attack' isn't defined - lib\providers\battle_provider.dart:13:7 - undefined_named_parameter
+  error - The named parameter 'defense' isn't defined - lib\providers\battle_provider.dart:14:7 - undefined_named_parameter
+  error - The named parameter 'speed' isn't defined - lib\providers\battle_provider.dart:15:7 - undefined_named_parameter
+  error - The named parameter 'ability' isn't defined - lib\providers\battle_provider.dart:16:7 - undefined_named_parameter
+  error - The named parameter 'alignment' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:18:5 - missing_required_argument
+  error - The named parameter 'fullName' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:18:5 - missing_required_argument
+  error - The named parameter 'imageUrl' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:18:5 - missing_required_argument
+  error - The named parameter 'powerStats' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:18:5 - missing_required_argument
+  error - The named parameter 'publisher' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:18:5 - missing_required_argument
+  error - The named parameter 'maxHp' isn't defined - lib\providers\battle_provider.dart:21:7 - undefined_named_parameter
+  error - The named parameter 'attack' isn't defined - lib\providers\battle_provider.dart:22:7 - undefined_named_parameter
+  error - The named parameter 'defense' isn't defined - lib\providers\battle_provider.dart:23:7 - undefined_named_parameter
+  error - The named parameter 'speed' isn't defined - lib\providers\battle_provider.dart:24:7 - undefined_named_parameter
+  error - The named parameter 'ability' isn't defined - lib\providers\battle_provider.dart:25:7 - undefined_named_parameter
+  error - The named parameter 'alignment' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:27:5 - missing_required_argument
+  error - The named parameter 'fullName' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:27:5 - missing_required_argument
+  error - The named parameter 'imageUrl' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:27:5 - missing_required_argument
+  error - The named parameter 'powerStats' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:27:5 - missing_required_argument
+  error - The named parameter 'publisher' is required, but there's no corresponding argument - lib\providers\battle_provider.dart:27:5 - missing_required_argument
+  error - The named parameter 'maxHp' isn't defined - lib\providers\battle_provider.dart:30:7 - undefined_named_parameter
+  error - The named parameter 'attack' isn't defined - lib\providers\battle_provider.dart:31:7 - undefined_named_parameter
+  error - The named parameter 'defense' isn't defined - lib\providers\battle_provider.dart:32:7 - undefined_named_parameter
+  error - The named parameter 'speed' isn't defined - lib\providers\battle_provider.dart:33:7 - undefined_named_parameter
+  error - The named parameter 'ability' isn't defined - lib\providers\battle_provider.dart:34:7 - undefined_named_parameter
+  error - Class 'DeckProvider' can't define static member 'maxDeckSize' and have instance member 'DeckProvider.maxDeckSize' with the same name - lib\providers\deck_provider.dart:8:20 - conflicting_static_and_instance
+  error - Getters must be declared without a parameter list - lib\providers\deck_provider.dart:69:22 - getter_with_parameters
+  error - The getter 'totalBattles' isn't defined for the type 'PlayerProvider' - lib\screens\battle\battle_history_screen.dart:52:40 - undefined_getter
+  error - The getter 'totalLosses' isn't defined for the type 'PlayerProvider' - lib\screens\battle\battle_screen.dart:35:63 - undefined_getter
+  error - The getter 'totalBattles' isn't defined for the type 'PlayerProvider' - lib\screens\battle\battle_screen.dart:35:95 - undefined_getter
+  error - The method 'recordBattleResult' isn't defined for the type 'PlayerProvider' - lib\screens\battle\battle_screen.dart:55:60 - undefined_method
+  error - The expression doesn't evaluate to a function, so it can't be invoked - lib\screens\deck\deck_screen.dart:76:41 - invocation_of_non_function_expression
+  error - The expression doesn't evaluate to a function, so it can't be invoked - lib\screens\home\home_screen.dart:53:31 - invocation_of_non_function_expression
+  error - Undefined class 'Widget' - lib\services\prefs_service.dart:101:3 - undefined_class
+  error - Undefined class 'BuildContext' - lib\services\prefs_service.dart:101:16 - undefined_class
+  error - The function 'Scaffold' isn't defined - lib\services\prefs_service.dart:102:12 - undefined_function
+  error - The function 'AppBar' isn't defined - lib\services\prefs_service.dart:103:15 - undefined_function
+  error - The name 'Text' isn't a class - lib\services\prefs_service.dart:103:35 - creation_with_non_type
+  error - The function 'FutureBuilder' isn't defined - lib\services\prefs_service.dart:104:13 - undefined_function
+  error - Instance member 'loadThemeDark' can't be accessed using static access - lib\services\prefs_service.dart:106:24 - static_access_to_instance_member
+  error - Instance member 'isSoundEnabled' can't be accessed using static access - lib\services\prefs_service.dart:107:24 - static_access_to_instance_member
+  error - Instance member 'isVibrationEnabled' can't be accessed using static access - lib\services\prefs_service.dart:108:24 - static_access_to_instance_member
+  error - The name 'Center' isn't a class - lib\services\prefs_service.dart:112:26 - creation_with_non_type
+  error - The function 'CircularProgressIndicator' isn't defined - lib\services\prefs_service.dart:112:40 - undefined_function
+  error - The function 'ListView' isn't defined - lib\services\prefs_service.dart:119:18 - undefined_function
+  error - The function 'SwitchListTile' isn't defined - lib\services\prefs_service.dart:121:15 - undefined_function
+  error - The name 'Text' isn't a class - lib\services\prefs_service.dart:122:30 - creation_with_non_type
+  error - Instance member 'saveThemeDark' can't be accessed using static access - lib\services\prefs_service.dart:125:38 - static_access_to_instance_member
+  error - The function 'SwitchListTile' isn't defined - lib\services\prefs_service.dart:129:15 - undefined_function
+  error - The name 'Text' isn't a class - lib\services\prefs_service.dart:130:30 - creation_with_non_type
+  error - Instance member 'setSoundEnabled' can't be accessed using static access - lib\services\prefs_service.dart:133:38 - static_access_to_instance_member
+  error - The function 'SwitchListTile' isn't defined - lib\services\prefs_service.dart:136:15 - undefined_function
+  error - The name 'Text' isn't a class - lib\services\prefs_service.dart:137:30 - creation_with_non_type
+  error - Instance member 'setVibrationEnabled' can't be accessed using static access - lib\services\prefs_service.dart:140:38 - static_access_to_instance_member
+  error - The function 'ListTile' isn't defined - lib\services\prefs_service.dart:143:15 - undefined_function
+  error - The name 'Text' isn't a class - lib\services\prefs_service.dart:144:30 - creation_with_non_type
+  error - The function 'FutureBuilder' isn't defined - lib\services\prefs_service.dart:145:27 - undefined_function
+  error - Instance member 'getTotalBattles' can't be accessed using static access - lib\services\prefs_service.dart:147:34 - static_access_to_instance_member
+  error - Instance member 'getTotalWins' can't be accessed using static access - lib\services\prefs_service.dart:148:34 - static_access_to_instance_member
+  error - The method 'getWinRatio' isn't defined for the type 'PrefsService' - lib\services\prefs_service.dart:149:34 - undefined_method
+  error - The name 'Text' isn't a class - lib\services\prefs_service.dart:153:36 - creation_with_non_type
+  error - The function 'Text' isn't defined - lib\services\prefs_service.dart:158:28 - undefined_function
+  error - The function 'ElevatedButton' isn't defined - lib\services\prefs_service.dart:166:15 - undefined_function
+  error - Instance member 'clearAllPreferences' can't be accessed using static access - lib\services\prefs_service.dart:168:38 - static_access_to_instance_member
+  error - The name 'Text' isn't a class - lib\services\prefs_service.dart:171:30 - creation_with_non_type
+  error - Expected a method, getter, setter or operator declaration - lib\services\prefs_service.dart:179:1 - expected_executable
+  error - Classes can only extend other classes - lib\services\prefs_service.dart:182:32 - extends_non_class
+  error - Undefined class 'TextEditingController' - lib\services\prefs_service.dart:183:9 - undefined_class
+  error - The method 'TextEditingController' isn't defined for the type 'OnboardingScreen' - lib\services\prefs_service.dart:183:48 - undefined_method
+  error - Undefined class 'Key' - lib\services\prefs_service.dart:185:21 - undefined_class
+  error - The named parameter 'key' isn't defined - lib\services\prefs_service.dart:185:40 - undefined_named_parameter
+  error - Undefined class 'Widget' - lib\services\prefs_service.dart:188:3 - undefined_class
+warning - The method doesn't override an inherited method - lib\services\prefs_service.dart:188:10 - override_on_non_overriding_member
+  error - Undefined class 'BuildContext' - lib\services\prefs_service.dart:188:16 - undefined_class
+  error - The method 'Scaffold' isn't defined for the type 'OnboardingScreen' - lib\services\prefs_service.dart:189:12 - undefined_method
+  error - The method 'Padding' isn't defined for the type 'OnboardingScreen' - lib\services\prefs_service.dart:190:13 - undefined_method
+  error - Undefined name 'EdgeInsets' - lib\services\prefs_service.dart:191:24 - undefined_identifier
+  error - The method 'Column' isn't defined for the type 'OnboardingScreen' - lib\services\prefs_service.dart:192:16 - undefined_method
+  error - Undefined name 'MainAxisAlignment' - lib\services\prefs_service.dart:193:30 - undefined_identifier
+  error - The name 'Text' isn't a class - lib\services\prefs_service.dart:195:19 - creation_with_non_type
+  error - The name 'SizedBox' isn't a class - lib\services\prefs_service.dart:196:19 - creation_with_non_type
+  error - The method 'TextField' isn't defined for the type 'OnboardingScreen' - lib\services\prefs_service.dart:197:13 - undefined_method
+  error - The name 'InputDecoration' isn't a class - lib\services\prefs_service.dart:199:33 - creation_with_non_type
+  error - The method 'OutlineInputBorder' isn't defined for the type 'OnboardingScreen' - lib\services\prefs_service.dart:201:25 - undefined_method
+  error - The name 'SizedBox' isn't a class - lib\services\prefs_service.dart:204:19 - creation_with_non_type
+  error - The method 'ElevatedButton' isn't defined for the type 'OnboardingScreen' - lib\services\prefs_service.dart:205:13 - undefined_method
+  error - Instance member 'savePlayerName' can't be accessed using static access - lib\services\prefs_service.dart:208:38 - static_access_to_instance_member
+  error - Instance member 'setOnboarded' can't be accessed using static access - lib\services\prefs_service.dart:209:38 - static_access_to_instance_member
+  error - The name 'Text' isn't a class - lib\services\prefs_service.dart:213:28 - creation_with_non_type
+  error - The name 'MyApp' isn't a class - test\widget_test.dart:16:35 - creation_with_non_type
+
