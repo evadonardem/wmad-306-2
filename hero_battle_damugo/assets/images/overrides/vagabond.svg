@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5f2ea"/>
+      <stop offset="100%" stop-color="#e7ddd0"/>
+    </linearGradient>
+    <linearGradient id="hair" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4b13d"/>
+      <stop offset="100%" stop-color="#c97a1b"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="900" rx="36" fill="url(#bg)"/>
+  <path d="M170 300 C190 210 290 170 345 180 C410 193 455 255 458 320 C462 390 425 430 390 458 C350 490 240 490 205 455 C180 430 155 388 170 300 Z" fill="url(#hair)"/>
+  <path d="M206 288 C230 250 265 232 301 233 C338 233 368 247 392 281 C403 297 408 320 408 340 C392 336 374 338 356 347 C334 358 323 373 300 373 C277 373 266 358 244 347 C226 338 208 336 192 340 C192 320 195 302 206 288 Z" fill="#f2c8a1"/>
+  <ellipse cx="300" cy="350" rx="62" ry="78" fill="#f2c8a1"/>
+  <path d="M190 505 C220 470 250 455 300 455 C350 455 380 470 410 505 L470 600 C460 630 437 648 405 660 L195 660 C163 648 140 630 130 600 L190 505 Z" fill="#274c9d"/>
+  <path d="M204 515 C228 490 257 477 300 477 C343 477 372 490 396 515 L386 650 L214 650 Z" fill="#ffffff" opacity="0.92"/>
+  <path d="M216 520 C238 498 266 488 300 488 C334 488 362 498 384 520 L374 640 L226 640 Z" fill="#cf2d2d"/>
+  <path d="M226 640 L374 640 L382 710 C358 734 332 748 300 748 C268 748 242 734 218 710 Z" fill="#f2c8a1"/>
+  <path d="M230 300 C240 265 264 248 300 248 C336 248 360 265 370 300" fill="none" stroke="#17305f" stroke-width="16" stroke-linecap="round"/>
+  <path d="M246 330 C256 320 268 315 282 315" fill="none" stroke="#17305f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M318 315 C332 315 344 320 354 330" fill="none" stroke="#17305f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M250 360 C272 376 328 376 350 360" fill="none" stroke="#a44b4b" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="250" cy="345" rx="20" ry="14" fill="#1e4f97" opacity="0.92"/>
+  <ellipse cx="350" cy="345" rx="20" ry="14" fill="#1e4f97" opacity="0.92"/>
+  <path d="M220 620 C260 600 340 600 380 620" fill="none" stroke="#1c2b55" stroke-width="14" stroke-linecap="round"/>
+  <text x="300" y="820" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" fill="#444444" letter-spacing="6">VAGABOND</text>
+</svg>
