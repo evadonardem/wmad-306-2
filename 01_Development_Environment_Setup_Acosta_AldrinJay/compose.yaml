@@ -1,7 +1,6 @@
 services:
   web:
     image: "evadonardem/wmad-306:latest"
-    user: "${UID}:${GID}"
     ports:
       - "8000:80"
       - "5173:5173"
@@ -23,7 +22,7 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=123456
     ports:
-      - "3306:3306"
+      - "3307:3306"
     networks:
       - db_network
     volumes:
