@@ -1,34 +1,41 @@
-import 'package:adopt_a_dog/screens/breed_list_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+
+import 'providers/dogs_provider.dart';
+import 'providers/favorites_provider.dart';
+import 'screens/splash_screen.dart';
+import 'services/api_service.dart';
+import 'theme/app_theme.dart';
 
 void main() {
-  runApp(const AdoptADogApp());
+  runApp(const PawMatchApp());
 }
 
-class AdoptADogApp extends StatelessWidget {
-  const AdoptADogApp({super.key});
+class PawMatchApp extends StatelessWidget {
+  const PawMatchApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Adopt-a-Dog',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorSchemeSeed: Colors.green,
-        useMaterial3: true,
-        appBarTheme: const AppBarTheme(
-          backgroundColor: Colors.green,
-          foregroundColor: Colors.white,
+    return MultiProvider(
+      providers: [
+        // ApiService is shared by both providers and the adoption form sheet.
+        Provider<ApiService>(
+          create: (_) => ApiService(),
+          dispose: (_, _) {},
         ),
-        listTileTheme: const ListTileThemeData(
-          iconColor: Colors.greenAccent,
-          textColor: Colors.green,
-          shape: Border(
-            bottom: BorderSide(width: 1)
-          ),
-        )
+        ChangeNotifierProvider<DogsProvider>(
+          create: (ctx) => DogsProvider(ctx.read<ApiService>()),
+        ),
+        ChangeNotifierProvider<FavoritesProvider>(
+          create: (_) => FavoritesProvider(),
+        ),
+      ],
+      child: MaterialApp(
+        title: 'PawMatch',
+        debugShowCheckedModeBanner: false,
+        theme: AppTheme.light(),
+        home: const SplashScreen(),
       ),
-      home: BreedListScreen(),
     );
   }
 }
