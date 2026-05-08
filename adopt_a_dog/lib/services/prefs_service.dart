@@ -8,6 +8,11 @@ class PrefsService {
     return prefs.getString(_keyFavorite);
   }
 
+  Future<void> saveFavorite(String breedName) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString(_keyFavorite, breedName);
+  }
+
   Future<void> clearFavorite() async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.remove(_keyFavorite);
