@@ -29,4 +29,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function leagues()
+    {
+        return $this->hasMany(League::class);
+    }
 }
