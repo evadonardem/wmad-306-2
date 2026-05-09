@@ -1,0 +1,83 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run -d web-server --web-port 8080
+
+## exception
+
+PathAccessException: PathAccessException: Deletion failed, path = 'C:\Users\User\AppData\Local\Temp\flutter_tools.cfba86a3\flutter_tool.43e7f9f9' (OS Error: The process cannot access the file because it is being used by another process, errno = 32)
+
+```
+#0      _Directory._deleteSync (dart:io/directory_impl.dart:216:7)
+#1      FileSystemEntity.deleteSync (dart:io/file_system_entity.dart:425:7)
+#2      ForwardingFileSystemEntity.deleteSync (package:file/src/forwarding/forwarding_file_system_entity.dart:70:16)
+#3      ErrorHandlingDirectory.deleteSync.<anonymous closure> (package:flutter_tools/src/base/error_handling_io.dart:451:22)
+#4      _runSync (package:flutter_tools/src/base/error_handling_io.dart:552:14)
+#5      ErrorHandlingDirectory.deleteSync (package:flutter_tools/src/base/error_handling_io.dart:450:12)
+#6      ResidentRunner.preExit (package:flutter_tools/src/resident_runner.dart:1435:25)
+#7      ResidentRunner.exit (package:flutter_tools/src/resident_runner.dart:1278:11)
+<asynchronous suspension>
+#8      TerminalHandler._commonTerminalInputHandler (package:flutter_tools/src/resident_runner.dart:1830:9)
+<asynchronous suspension>
+#9      TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1906:7)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.41.7, on Microsoft Windows [Version
+    10.0.26200.8246], locale en-PH) [1,660ms]
+    [32m•[39m Flutter version 3.41.7 on channel stable at C:\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision cc0734ac71 (2 weeks ago), 2026-04-15 21:21:08 -0700
+    [32m•[39m Engine revision 59aa584fdf
+    [32m•[39m Dart version 3.11.5
+    [32m•[39m DevTools version 2.54.2
+    [32m•[39m Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop,
+      enable-windows-desktop, enable-android, enable-ios, cli-animations,
+      enable-native-assets, omit-legacy-version-file, enable-lldb-debugging,
+      enable-uiscene-migration
+
+[32m[✓][39m Windows Version (Windows 11 or higher, 25H2, 2009) [4.5s]
+
+[33m[!][39m Android toolchain - develop for Android devices (Android SDK version 36.1.0)
+    [16.9s]
+    [32m•[39m Android SDK at C:\Users\User\AppData\Local\Android\sdk
+    [32m•[39m Emulator version 36.5.11.0 (build_id 15261927) (CL:N/A)
+    [32m•[39m Platform android-36.1, build-tools 36.1.0
+    [32m•[39m Java binary at: C:\Program Files\Android\Android Studio\jbr\bin\java
+      This is the JDK bundled with the latest Android Studio installation on
+      this machine.
+      To manually set the JDK path, use: `flutter config
+      --jdk-dir="path/to/jdk"`.
+    [32m•[39m Java version OpenJDK Runtime Environment (build
+      21.0.10+-14961533-b1163.108)
+    [33m![39m Some Android licenses not accepted. To resolve this, run: flutter doctor
+      --android-licenses
+
+[32m[✓][39m Chrome - develop for the web [87ms]
+    [32m•[39m Chrome at C:\Program Files\Google\Chrome\Application\chrome.exe
+
+[31m[✗][39m Visual Studio - develop Windows apps [79ms]
+    [31m✗[39m Visual Studio not installed; this is necessary to develop Windows apps.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all
+      of its default components
+
+[32m[✓][39m Connected device (4 available) [2.2s]
+    [32m•[39m Windows (desktop) • windows    • windows-x64    • Microsoft Windows
+      [Version 10.0.26200.8246]
+    [32m•[39m Web Server (web)  • web-server • web-javascript • Flutter Tools
+    [32m•[39m Chrome (web)      • chrome     • web-javascript • Google Chrome
+      147.0.7727.119
+    [32m•[39m Edge (web)        • edge       • web-javascript • Microsoft Edge
+      147.0.3912.72
+
+[32m[✓][39m Network resources [2.1s]
+    [32m•[39m All expected network resources are available.
+
+[33m![39m Doctor found issues in 2 categories.
+```
