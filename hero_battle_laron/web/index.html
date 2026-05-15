@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Battle - Minimal Web Version</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .search-container {
+            margin-bottom: 30px;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        .hero-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .hero-card {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .hero-card img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+        .loading {
+            text-align: center;
+            font-size: 18px;
+        }
+        .error {
+            color: #ff6b6b;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🦸 Hero Battle Game</h1>
+
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for heroes (e.g., batman, superman)">
+            <button onclick="searchHeroes()">Search Heroes</button>
+            <button onclick="clearResults()">Clear</button>
+        </div>
+
+        <div id="status"></div>
+        <div id="results" class="hero-grid"></div>
+    </div>
+
+    <script>
+        const API_BASE = 'http://localhost:8080/';
+
+        async function searchHeroes() {
+            const query = document.getElementById('searchInput').value.trim();
+            if (!query) {
+                showStatus('Please enter a hero name to search', 'error');
+                return;
+            }
+
+            showStatus('Searching for heroes...', 'loading');
+
+            try {
+                const response = await fetch(`${API_BASE}5e0b738ac29491ed4a6facd7b271f13b/search/${encodeURIComponent(query)}`);
+                const data = await response.json();
+
+                if (data.response === 'success' && data.results) {
+                    displayHeroes(data.results);
+                    showStatus(`Found ${data.results.length} hero(es)`, '');
+                } else {
+                    showStatus('No heroes found', 'error');
+                    document.getElementById('results').innerHTML = '';
+                }
+            } catch (error) {
+                showStatus('Error searching heroes: ' + error.message, 'error');
+                console.error('Search error:', error);
+            }
+        }
+
+        function displayHeroes(heroes) {
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = '';
+
+            heroes.forEach(hero => {
+                const card = document.createElement('div');
+                card.className = 'hero-card';
+
+                card.innerHTML = `
+                    <img src="${hero.image?.url || 'https://via.placeholder.com/100x100?text=No+Image'}" alt="${hero.name}" onerror="this.src='https://via.placeholder.com/100x100?text=No+Image'">
+                    <h3>${hero.name}</h3>
+                    <p><strong>Real Name:</strong> ${hero.biography?.['full-name'] || 'Unknown'}</p>
+                    <p><strong>Publisher:</strong> ${hero.biography?.publisher || 'Unknown'}</p>
+                    <p><strong>Intelligence:</strong> ${hero.powerstats?.intelligence || 'N/A'}</p>
+                    <p><strong>Strength:</strong> ${hero.powerstats?.strength || 'N/A'}</p>
+                    <button onclick="selectHero('${hero.id}')">Select for Battle</button>
+                `;
+
+                resultsDiv.appendChild(card);
+            });
+        }
+
+        function selectHero(heroId) {
+            showStatus(`Hero ${heroId} selected for battle! (Battle system coming soon)`, '');
+        }
+
+        function clearResults() {
+            document.getElementById('results').innerHTML = '';
+            document.getElementById('searchInput').value = '';
+            showStatus('', '');
+        }
+
+        function showStatus(message, type) {
+            const statusDiv = document.getElementById('status');
+            statusDiv.textContent = message;
+            statusDiv.className = type;
+        }
+
+        // Auto-search on Enter key
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                searchHeroes();
+            }
+        });
+
+        // Show welcome message
+        showStatus('Enter a hero name and click Search to begin!', '');
+    </script>
+</body>
+</html>
