@@ -459,6 +459,28 @@
     - Policy coverage and/or controller authorization calls need stronger enforcement.
     - Seeder quality is limited; add richer fake data and explicit project/task seeding flow.
 
+### Acosta
+- Folder: `03_Project_Tracker_Acosta`
+- Evaluator scores:
+  - A: MM=2.0, SD=1.0, CRUD=1.0, PA=0.0, FE=1.0, RF=0.0, Total=5.0
+  - B: MM=1.0, SD=1.0, CRUD=1.0, PA=0.0, FE=1.0, RF=0.0, Total=4.0
+  - C: MM=2.0, SD=1.0, CRUD=1.0, PA=0.0, FE=1.0, RF=0.0, Total=5.0
+- Averaged rubric scores:
+  - Migrations & Models: 1.67/20
+  - Seeders & Fake Data: 1.00/7
+  - Controllers & CRUD: 1.00/25
+  - Policies & Authorization: 0.00/15
+  - Frontend: 1.00/15
+  - Relationships & Functionality: 0.00/18
+  - Average Total: **4.67/100**
+- Notes:
+  - Strengths:
+    - Project structure is correctly initialized.
+  - Gaps:
+    - Minimal to no implementation of the Project Tracker requirements.
+    - Missing Project and Task models, migrations, and controllers.
+    - No authorization policies implemented.
+
 ## Ranking
 | Rank | Student | Average Total | Deduction % | Final Score |
 |---|---|---:|---:|---:|
@@ -484,3 +506,4 @@
 | 20 | Sigue | 83.83 | 25.0% | 62.8725 |
 | 21 | Canuto | 52.37 | 25.0% | 39.2775 |
 | 22 | Aquisan | 49.68 | 15.0% | 42.228 |
+| 23 | Acosta | 4.67 | 40.0% | 2.802 |
