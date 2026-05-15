@@ -26,8 +26,11 @@
 | hero_battle_godoy | 50 | 18 | 5 | 73 | - | 73 |
 | hero_battle_gullunan | 50 | 19 | 8 | 77 | 20% | 61.6 |
 | hero_battle_ho | 50 | 20 | 10 | 80 | 60% | 32 |
+| hero_battle_hunas | 50 | 20 | 5 | 75 | 70% | 22.5 |
 | hero_battle_icad | 50 | 13 | 2 | 65 | 20% | 52 |
 | hero_battle_lang-odan | 50 | 20 | 10 | 80 | 25% | 60 |
+| hero_battle_laron | 0 | 0 | 0 | 0 | 70% | 0 |
+| hero_battle_rosalejos | 50 | 20 | 10 | 80 | 70% | 24 |
 | hero_battle_sarino | 50 | 20 | 7 | 77 | - | 77 |
 | hero_battle_sigue | 50 | 15 | 5 | 70 | 15% | 59.5 |
 | hero_battle_visaya | 50 | 20 | 10 | 80 | 15% | 68 |
@@ -132,6 +135,12 @@
 - **Bonus (10/10)**: Exceptional image resolution strategy with multiple fallback layers.
 - **Total**: 80/80
 
+### hero_battle_hunas
+- **Core Implementation (50/50)**: Perfect implementation.
+- **Exercises (20/20)**: All exercises fully implemented.
+- **Bonus (5/10)**: Clean UI and strictly follows the requested architecture.
+- **Total**: 75/80
+
 ### hero_battle_icad
 - **Core Implementation (50/50)**: Perfect implementation.
 - **Exercises (13/20)**: Ex 1 uses hardcoded name; Ex 4 not implemented.
@@ -142,6 +151,18 @@
 - **Core Implementation (50/50)**: Perfect implementation.
 - **Exercises (20/20)**: All exercises fully implemented.
 - **Bonus (10/10)**: Complex battle engine with Roles, Skills, and XP/Leveling system.
+- **Total**: 80/80
+
+### hero_battle_laron
+- **Core Implementation (0/50)**: Critical dependencies (`sqflite`, `shared_preferences`) were commented out in `pubspec.yaml`, rendering the app non-functional.
+- **Exercises (0/20)**: No functional implementation due to missing dependencies.
+- **Bonus (0/10)**: No submission.
+- **Total**: 0/80
+
+### hero_battle_rosalejos
+- **Core Implementation (50/50)**: Perfect implementation.
+- **Exercises (20/20)**: All exercises fully implemented.
+- **Bonus (10/10)**: Exceptional technical excellence and visual polish. Implemented a sophisticated `SavedDecksScreen` with image previews and advanced stats aggregation in `PlayerProvider`.
 - **Total**: 80/80
 
 ### hero_battle_sarino
