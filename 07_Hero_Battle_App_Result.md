@@ -21,7 +21,7 @@
 | hero_battle_ceasar | 0 | 0 | 0 | 0 | 60% | 0 |
 | hero_battle_cirilo | 50 | 20 | 5 | 75 | 15% | 63.75 |
 | hero_battle_cuyangan | 50 | 20 | 5 | 75 | 15% | 63.75 |
-| hero_battle_damugo | 50 | 20 | 10 | 80 | 15% | 68 |
+| hero_battle_damugo | 50 | 20 | 10 | 80 | - | 80 |
 | hero_battle_ebes | 46 | 20 | 8 | 74 | 20% | 59.2 |
 | hero_battle_godoy | 50 | 18 | 5 | 73 | - | 73 |
 | hero_battle_gullunan | 50 | 19 | 8 | 77 | 20% | 61.6 |
