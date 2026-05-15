@@ -21,8 +21,10 @@
 | ceasar | 95 | 25 | 5 | 125 | 30% | 87.5 |
 | cuyangan | 95 | 25 | 5 | 125 | 20% | 100 |
 | damugo | 95 | 25 | 5 | 123 | - | 123 |
+| ebes | 95 | 25 | 5 | 125 | 65% | 43.75 |
 | godoy | 95 | 25 | 5 | 125 | 20% | 100 |
 | ho | 95 | 25 | 5 | 123 | 30% | 86.1 |
+| hunas | 95 | 25 | 5 | 125 | 65% | 43.75 |
 | icad | 90 | 10 | 0 | 100 | 20% | 80 |
 | lang-odan | 95 | 25 | 5 | 125 | 30% | 87.5 |
 | laron | 95 | 25 | 5 | 125 | 40% | 75 |
@@ -278,6 +280,26 @@
 - **Final Grade**: **123 / 130**
 - **Feedback**: Very high-quality implementation. The API is robust, and the game scheduling validation is particularly well-handled. The only minor issue is the sort order in the Standings endpoint; remember that in Laravel collections, the sortBy call takes precedence. To sort by wins (desc) and then losses (asc), you should call sortBy('losses') first, then sortByDesc('wins').
 
+### barangay_sport_league_api_ebes
+- **Panel A Findings**:
+    - Migrations: Fully compliant. All 9 required tables implemented. The `player_team` pivot table correctly uses a composite primary key and includes the `jersey_number` column.
+    - Models: All 8 models present with correct Eloquent relationships. The Team-Player relationship correctly utilizes `withPivot('jersey_number')`.
+- **Panel B Findings**:
+    - Auth: Laravel Sanctum correctly implemented; `AuthController` provides register, login (returning plain-text token), and logout.
+    - Route Protection: All protected endpoints are wrapped in the `auth:sanctum` middleware.
+    - Logic: Rigorous league and season scoping implemented via `findUserSeason` helper in `SeasonController` and direct relationship scoping in `LeagueController`.
+    - Game Validation: Fully implemented rules for self-play, season membership, order-independent duplicate matchups, and date conflicts (422 responses).
+    - Stats: Correctly restricted to games with status 'done'.
+- **Panel C Findings**:
+    - Standings: Correctly calculates W-L records and sorts by wins.
+    - Leaderboard: Correctly aggregates and limits the top 10 players by total points for the season.
+    - Exercise 1: `GET /api/seasons/{id}/summary` fully implemented with all 4 required aggregates.
+    - Exercise 2: Advanced game validation (duplicates and date conflicts) is fully implemented.
+    - Exercise 3: `GET /api/players/{id}/profile` fully implemented, providing team history, career totals, and personal best.
+- **Bonus Justification**: Awarded 5 bonus points for a clean, professional implementation and effective use of Route Model Binding to simplify controller logic.
+- **Final Grade**: **125 / 130**
+- **Feedback**: Excellent work. Your implementation is robust and follows all requirements with precision. The codebase is easy to read and maintain.
+
 ### barangay_sport_league_api_godoy
 - **Panel A Findings**:
     - Migrations: Perfectly implemented. All 9 tables are present with correct foreign key constraints and the `player_team` pivot table.
@@ -320,6 +342,26 @@
 - **Bonus Justification**: Awarded 5 bonus points for implementing additional validation in `submitPlayerStats` to verify that players being assigned stats actually belong to the teams competing in the game.
 - **Final Grade**: **123 / 130**
 - **Feedback**: Very high-quality implementation. The API is robust, and the game scheduling and player stats validation are particularly well-handled. The only minor issue is the sort order in the Standings endpoint; remember that in Laravel collections, the sortBy call takes precedence. To sort by wins (desc) and then losses (asc), you should call sortBy('losses') first, then sortByDesc('wins').
+
+### barangay_sport_league_api_hunas
+- **Panel A Findings**:
+    - Migrations: All 9 tables present. `player_team` pivot table correctly implemented with `jersey_number` and a composite primary key.
+    - Models: All 8 models implement the required relationships. `withPivot('jersey_number')` is correctly used for the Team-Player relationship.
+- **Panel B Findings**:
+    - Auth: Sanctum implemented correctly; login returns a plain-text token.
+    - Route Protection: All business routes are strictly protected by `auth:sanctum`.
+    - Logic: Strong scoping implemented across all controllers, ensuring users only access resources belonging to their own leagues.
+    - Game Validation: Fully implements all rules, including bidirectional duplicate matchup detection and date conflict validation.
+    - Stats: Correctly restricted to games with status 'done'.
+- **Panel C Findings**:
+    - Standings: Correctly calculates W-L records and sorts by wins.
+    - Leaderboard: Correctly aggregates top 10 players by points for the specified season.
+    - Exercise 1: Season summary endpoint is fully implemented with all required metrics.
+    - Exercise 2: Game validation for duplicate matchups and date conflicts is fully implemented.
+    - Exercise 3: Player profile endpoint is fully implemented, providing comprehensive career stats and team history.
+- **Bonus Justification**: Awarded 5 bonus points for superior code structure, use of Laravel `Attribute` casting for calculated fields (e.g., player age), and highly descriptive API responses.
+- **Final Grade**: **125 / 130**
+- **Feedback**: Outstanding implementation. Your attention to detail in both the business logic and the technical implementation (such as using Attributes) shows a high level of proficiency.
 
 ### barangay_sport_league_api_icad
 - **Panel A Findings**:
