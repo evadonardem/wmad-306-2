@@ -128,6 +128,14 @@
   - Core Implementation: 35 / 35
   - Exercises: 15 / 15
 
+## adopt_a_dog_hunas
+- **Total Score:** 50 / 50
+- **Bonus:** 2
+- **Summary:** A flawless implementation. The student perfectly met all core requirements and completed every exercise. The code is exceptionally well-organized, and the addition of a dedicated image viewer for favorites and memory optimizations for images demonstrate a high level of attention to detail and UX.
+- **Detailed Breakdown:**
+  - Core Implementation: 35 / 35
+  - Exercises: 15 / 15
+
 ## adopt_a_dog_icad
 - **Total Score:** 46 / 50
 - **Bonus:** 3
@@ -204,6 +212,7 @@
 | adopt_a_dog_godoy | 42 | 0 | - | 42 / 50 |
 | adopt_a_dog_gullunan | 50 | 5 | - | 55 / 50 |
 | adopt_a_dog_ho | 50 | 0 | 60% | 20 / 50 |
+| adopt_a_dog_hunas | 50 | 2 | 70% | 15.6 / 50 |
 | adopt_a_dog_icad | 46 | 3 | 15% | 41.65 / 50 |
 | adopt_a_dog_lang-odan | 50 | 3 | - | 53 / 50 |
 | adopt_a_dog_laron | 24 | 0 | 60% | 9.6 / 50 |
